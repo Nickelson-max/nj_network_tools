@@ -1,0 +1,955 @@
+[
+  {
+    "command": "show running-config",
+    "description": "Montre konfigirasyon ki ap kouri kounye a nan RAM.",
+    "type": "Show / Verification",
+    "category": "System & File Management",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "show startup-config",
+    "description": "Montre konfigirasyon ki sove nan NVRAM.",
+    "type": "Show / Verification",
+    "category": "System & File Management",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "copy running-config startup-config",
+    "description": "Sove konfigirasyon RAM nan NVRAM pou l pa pèdi lè aparèy la redevlope.",
+    "type": "Configuration",
+    "category": "System & File Management",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "erase startup-config",
+    "description": "Efase tout konfigirasyon ki nan NVRAM la.",
+    "type": "Configuration",
+    "category": "System & File Management",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "vlan 10",
+    "description": "Kreye yon nouvo VLAN ak ID 10.",
+    "type": "Configuration",
+    "category": "VLAN",
+    "mode": "Global Config"
+  },
+  {
+    "command": "name SALES",
+    "description": "Bati yon non pou VLAN an.",
+    "type": "Configuration",
+    "category": "VLAN",
+    "mode": "VLAN Config"
+  },
+  {
+    "command": "show vlan brief",
+    "description": "Montre lis tout VLAN yo ak pò ki nan chak VLAN.",
+    "type": "Show / Verification",
+    "category": "VLAN",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "switchport mode trunk",
+    "description": "Mete yon entèfas nan mòd Trunk pou pase plizyè VLAN.",
+    "type": "Configuration",
+    "category": "Trunking & Dot1Q",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "switchport trunk allowed vlan 10,20",
+    "description": "Otorize sèlman VLAN 10 ak 20 sou lyen trunk sa a.",
+    "type": "Configuration",
+    "category": "Trunking & Dot1Q",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "spanning-tree mode rapid-pvst",
+    "description": "Mete Spanning Tree nan mòd Rapid PVST+.",
+    "type": "Configuration",
+    "category": "Spanning Tree (STP/RSTP/MST)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "show spanning-tree",
+    "description": "Verifye nivo ak eta Spanning Tree sou switch la.",
+    "type": "Show / Verification",
+    "category": "Spanning Tree (STP/RSTP/MST)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "ip address 192.168.1.1 255.255.255.0",
+    "description": "Mete yon adrès IP ak yon mask sou yon entèfas.",
+    "type": "Configuration",
+    "category": "IP Addressing & Subnetting",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "no shutdown",
+    "description": "Aktivite yon entèfas ki te etenn.",
+    "type": "Configuration",
+    "category": "IP Addressing & Subnetting",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "show ip interface brief",
+    "description": "Montre rezime entèfas yo, IP yo ak status fizrik/lojik yo.",
+    "type": "Show / Verification",
+    "category": "IP Addressing & Subnetting",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "ip route 0.0.0.0 0.0.0.0 192.168.1.254",
+    "description": "Konfigire yon wout pa defo (Default Static Route).",
+    "type": "Configuration",
+    "category": "Static Routing",
+    "mode": "Global Config"
+  },
+  {
+    "command": "show ip route",
+    "description": "Montre tabl routaj (routing table) la.",
+    "type": "Show / Verification",
+    "category": "Static Routing",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "router ospf 1",
+    "description": "Kòmanse pwosesis OSPF ak Process ID 1.",
+    "type": "Configuration",
+    "category": "OSPF (v2 & v3)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "network 192.168.1.0 0.0.0.255 area 0",
+    "description": "Deklare rezo OSPF sou yon entèfas nan zòn 0.",
+    "type": "Configuration",
+    "category": "OSPF (v2 & v3)",
+    "mode": "Router Config"
+  },
+  {
+    "command": "show ip ospf neighbor",
+    "description": "Verifye tout vwazinaj OSPF ki etabli yo.",
+    "type": "Show / Verification",
+    "category": "OSPF (v2 & v3)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "router bgp 65000",
+    "description": "Kòmanse konfigirasyon BGP sou yon AS specific.",
+    "type": "Configuration",
+    "category": "BGP (eBGP & iBGP)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "neighbor 10.0.0.1 remote-as 65001",
+    "description": "Konfigire yon vwazen eBGP.",
+    "type": "Configuration",
+    "category": "BGP (eBGP & iBGP)",
+    "mode": "Router Config"
+  },
+  {
+    "command": "show ip bgp summary",
+    "description": "Montre rezime tout sesyon BGP ak vwa zenn yo.",
+    "type": "Show / Verification",
+    "category": "BGP (eBGP & iBGP)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "ip dhcp pool LAN_POOL",
+    "description": "Kreye yon poul DHCP pou distribye IP otomatikman.",
+    "type": "Configuration",
+    "category": "DHCP Server & Relay",
+    "mode": "Global Config"
+  },
+  {
+    "command": "network 192.168.10.0 255.255.255.0",
+    "description": "Defini rezo pou poul DHCP la.",
+    "type": "Configuration",
+    "category": "DHCP Server & Relay",
+    "mode": "DHCP Config"
+  },
+  {
+    "command": "default-router 192.168.10.1",
+    "description": "Defini paserèl (gateway) pa defo pou kliyan DHCP yo.",
+    "type": "Configuration",
+    "category": "DHCP Server & Relay",
+    "mode": "DHCP Config"
+  },
+  {
+    "command": "ip nat inside source list 1 interface GigabitEthernet0/0 overload",
+    "description": "Konfigire PAT (Port Address Translation) sou yon entèfas soti.",
+    "type": "Configuration",
+    "category": "NAT & PAT",
+    "mode": "Global Config"
+  },
+  {
+    "command": "show ip nat translations",
+    "description": "Afiche tout tradiksyon NAT ki ap fèt sou aparèy la.",
+    "type": "Show / Verification",
+    "category": "NAT & PAT",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "access-list 10 permit 192.168.1.0 0.0.0.255",
+    "description": "Kreye yon Standard ACL ki otorize yon rezo.",
+    "type": "Configuration",
+    "category": "Standard & Extended ACLs",
+    "mode": "Global Config"
+  },
+  {
+    "command": "ip access-list extended BLOCK_WEB",
+    "description": "Kreye yon Extended Named ACL.",
+    "type": "Configuration",
+    "category": "Standard & Extended ACLs",
+    "mode": "Global Config"
+  },
+  {
+    "command": "deny tcp any host 10.0.0.5 eq 80",
+    "description": "Anpeche nenpòt moun aksede yon sèvè Web an HTTP.",
+    "type": "Configuration",
+    "category": "Standard & Extended ACLs",
+    "mode": "ACL Config"
+  },
+  {
+    "command": "ping 8.8.8.8",
+    "description": "Tès si gen koneksyon an tan reyèl ak yon adrès IP.",
+    "type": "Troubleshooting",
+    "category": "Troubleshooting & Packet Capture (EPC)",
+    "mode": "User EXEC"
+  },
+  {
+    "command": "traceroute 8.8.8.8",
+    "description": "Trase wout yon pake pran pou l rive nan yon destinasyon.",
+    "type": "Troubleshooting",
+    "category": "Troubleshooting & Packet Capture (EPC)",
+    "mode": "User EXEC"
+  },
+
+  {
+    "command": "vlan 10",
+    "description": "Kreye yon nouvo VLAN ak ID 10.",
+    "type": "Configuration",
+    "category": "VLAN",
+    "mode": "Global Config"
+  },
+  {
+    "command": "name SALES",
+    "description": "Bay VLAN an yon non pou idantifye l.",
+    "type": "Configuration",
+    "category": "VLAN",
+    "mode": "VLAN Config"
+  },
+  {
+    "command": "show vlan brief",
+    "description": "Afiche yon rezime tout VLAN yo ak pò ki nan yo.",
+    "type": "Show / Verification",
+    "category": "VLAN",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "show vlan id 10",
+    "description": "Montre detay sèlman sou VLAN 10 la.",
+    "type": "Show / Verification",
+    "category": "VLAN",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "switchport access vlan 10",
+    "description": "Mete yon pò nan yon VLAN espesifik.",
+    "type": "Configuration",
+    "category": "VLAN",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "switchport mode access",
+    "description": "Konfigire pò a pou l mache tankou yon pò aksè sèlman.",
+    "type": "Configuration",
+    "category": "VLAN",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "switchport mode trunk",
+    "description": "Mete yon entèfas nan mòd Trunk pou l ka transpòte plizyè VLAN.",
+    "type": "Configuration",
+    "category": "Trunking & Dot1Q",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "switchport trunk encapsulation dot1q",
+    "description": "Defini enkapsilasyon 802.1Q sou yon lyen trunk.",
+    "type": "Configuration",
+    "category": "Trunking & Dot1Q",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "switchport trunk native vlan 99",
+    "description": "Mete VLAN natif la sou 99 pou sekirite ak trafik ki pa gen tag.",
+    "type": "Configuration",
+    "category": "Trunking & Dot1Q",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "switchport trunk allowed vlan 10,20,30",
+    "description": "Otorize sèlman VLAN 10, 20 ak 30 pou yo travèse trunk lan.",
+    "type": "Configuration",
+    "category": "Trunking & Dot1Q",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "show interfaces trunk",
+    "description": "Montre tout entèfas ki nan mòd trunk ak VLAN k ap pase ladan yo.",
+    "type": "Show / Verification",
+    "category": "Trunking & Dot1Q",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "spanning-tree mode rapid-pvst",
+    "description": "Aktivite Rapid Per-VLAN Spanning Tree Plus (RSTP).",
+    "type": "Configuration",
+    "category": "Spanning Tree (STP/RSTP/MST)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "spanning-tree vlan 10 priority 4096",
+    "description": "Mete switch sa a kòm Root Bridge prensipal pou VLAN 10.",
+    "type": "Configuration",
+    "category": "Spanning Tree (STP/RSTP/MST)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "spanning-tree portfast",
+    "description": "Aktivite PortFast sou yon pò pou l pase nan forwarding san tann STP.",
+    "type": "Configuration",
+    "category": "Spanning Tree (STP/RSTP/MST)",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "spanning-tree bpduguard enable",
+    "description": "Etenn pò a otomatikman si l resevwa yon BPDU pou evite boukl (loops).",
+    "type": "Configuration",
+    "category": "Spanning Tree (STP/RSTP/MST)",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "show spanning-tree summary",
+    "description": "Montre rezime eta Spanning Tree sou tout switch la.",
+    "type": "Show / Verification",
+    "category": "Spanning Tree (STP/RSTP/MST)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "channel-group 1 mode active",
+    "description": "Kreye yon EtherChannel lè l sèvi avèk protokòl LACP.",
+    "type": "Configuration",
+    "category": "EtherChannel & LACP",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "channel-group 1 mode desirable",
+    "description": "Kreye yon EtherChannel lè l sèvi avèk protokòl PAgP (Cisco).",
+    "type": "Configuration",
+    "category": "EtherChannel & LACP",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "interface port-channel 1",
+    "description": "Antre nan konfigirasyon entèfas lojik Port-Channel 1 an.",
+    "type": "Configuration",
+    "category": "EtherChannel & LACP",
+    "mode": "Global Config"
+  },
+  {
+    "command": "show etherchannel summary",
+    "description": "Verifye status EtherChannel yo ak pò ki ladan yo.",
+    "type": "Show / Verification",
+    "category": "EtherChannel & LACP",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "switchport port-security",
+    "description": "Aktivite sekirite pò sou yon entèfas aksè.",
+    "type": "Configuration",
+    "category": "Port Security",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "switchport port-security maximum 2",
+    "description": "Otorize sèlman 2 adrès MAC sou pò sa a.",
+    "type": "Configuration",
+    "category": "Port Security",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "switchport port-security mac-address sticky",
+    "description": "Aprann adrès MAC aparèy ki ploge a epi sove l dinamikman.",
+    "type": "Configuration",
+    "category": "Port Security",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "switchport port-security violation shutdown",
+    "description": "Etenn pò a sipitman si gen yon vyolasyon adrès MAC.",
+    "type": "Configuration",
+    "category": "Port Security",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "show port-security interface gi0/1",
+    "description": "Montre detay sou sekirite pò sou yon entèfas presi.",
+    "type": "Show / Verification",
+    "category": "Port Security",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "ip route 0.0.0.0 0.0.0.0 192.168.1.254",
+    "description": "Konfigire yon wout pa defo (Default Static Route).",
+    "type": "Configuration",
+    "category": "Static Routing",
+    "mode": "Global Config"
+  },
+  {
+    "command": "ip route 10.10.10.0 255.255.255.0 192.168.1.1",
+    "description": "Konfigire yon wout statik pou yon rezo presi ak Next-Hop IP.",
+    "type": "Configuration",
+    "category": "Static Routing",
+    "mode": "Global Config"
+  },
+  {
+    "command": "show ip route",
+    "description": "Montre tabl routaj (routing table) konplè routeur la.",
+    "type": "Show / Verification",
+    "category": "Static Routing",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "show ip route static",
+    "description": "Montre sèlman wout statik yo nan tabl routaj la.",
+    "type": "Show / Verification",
+    "category": "Static Routing",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "router ospf 1",
+    "description": "Kòmanse pwosesis OSPF v2 ak Process ID 1.",
+    "type": "Configuration",
+    "category": "OSPF (v2 & v3)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "router-id 1.1.1.1",
+    "description": "Defini yon ID inik pou routeur OSPF la.",
+    "type": "Configuration",
+    "category": "OSPF (v2 & v3)",
+    "mode": "Router Config"
+  },
+  {
+    "command": "network 10.0.0.0 0.0.0.255 area 0",
+    "description": "Deklare rezo OSPF sou yon entèfas ak Wildcard Mask nan Area 0.",
+    "type": "Configuration",
+    "category": "OSPF (v2 & v3)",
+    "mode": "Router Config"
+  },
+  {
+    "command": "passive-interface GigabitEthernet0/0",
+    "description": "Anpeche routeur la voye Hello Packets sou yon entèfas pou sekirite.",
+    "type": "Configuration",
+    "category": "OSPF (v2 & v3)",
+    "mode": "Router Config"
+  },
+  {
+    "command": "show ip ospf neighbor",
+    "description": "Verifye tout vwazinaj OSPF ki etabli ak lòt routeur yo.",
+    "type": "Show / Verification",
+    "category": "OSPF (v2 & v3)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "show ip ospf interface brief",
+    "description": "Montre yon rezime entèfas ki ap kouri OSPF yo ak Area yo.",
+    "type": "Show / Verification",
+    "category": "OSPF (v2 & v3)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "router eigrp 100",
+    "description": "Aktivite pwosesis EIGRP ak Autonomous System (AS) 100.",
+    "type": "Configuration",
+    "category": "EIGRP",
+    "mode": "Global Config"
+  },
+  {
+    "command": "network 172.16.0.0 0.0.255.255",
+    "description": "Deklare rezo pou pwosesis EIGRP la.",
+    "type": "Configuration",
+    "category": "EIGRP",
+    "mode": "Router Config"
+  },
+  {
+    "command": "no auto-summary",
+    "description": "Dezakti rezime otomatik rezo nan EIGRP oswa RIP.",
+    "type": "Configuration",
+    "category": "EIGRP",
+    "mode": "Router Config"
+  },
+  {
+    "command": "show ip eigrp neighbors",
+    "description": "Afiche tout vwazen EIGRP ki byen konekte yo.",
+    "type": "Show / Verification",
+    "category": "EIGRP",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "show ip eigrp topology",
+    "description": "Montre tabl topoloji EIGRP la ak tout Successors yo.",
+    "type": "Show / Verification",
+    "category": "EIGRP",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "router bgp 65001",
+    "description": "Lanse konfigirasyon protokòl BGP sou yon AS espesifik.",
+    "type": "Configuration",
+    "category": "BGP (eBGP & iBGP)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "neighbor 192.168.12.2 remote-as 65002",
+    "description": "Defini yon vwazen eBGP ki nan yon lòt AS.",
+    "type": "Configuration",
+    "category": "BGP (eBGP & iBGP)",
+    "mode": "Router Config"
+  },
+  {
+    "command": "network 10.0.0.0 mask 255.255.255.0",
+    "description": "Inisyalize yon rezo presi pou l ka anmonse nan BGP.",
+    "type": "Configuration",
+    "category": "BGP (eBGP & iBGP)",
+    "mode": "Router Config"
+  },
+  {
+    "command": "show ip bgp summary",
+    "description": "Montre eta sesyon BGP yo ak kantite prefiks ki resevwa.",
+    "type": "Show / Verification",
+    "category": "BGP (eBGP & iBGP)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "show ip bgp neighbors",
+    "description": "Montre detay konplè sou chak sesyon BGP.",
+    "type": "Show / Verification",
+    "category": "BGP (eBGP & iBGP)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "router rip",
+    "description": "Lanse pwosesis routaj RIP.",
+    "type": "Configuration",
+    "category": "RIP & RIPng",
+    "mode": "Global Config"
+  },
+  {
+    "command": "version 2",
+    "description": "Mete RIP sou vèsyon 2 ki sipòte VLSM ak classless routing.",
+    "type": "Configuration",
+    "category": "RIP & RIPng",
+    "mode": "Router Config"
+  },
+  {
+    "command": "ip dhcp pool VLAN10_POOL",
+    "description": "Kreye yon pis (pool) adrès IP pou kliyan DHCP yo.",
+    "type": "Configuration",
+    "category": "DHCP Server & Relay",
+    "mode": "Global Config"
+  },
+  {
+    "command": "network 192.168.10.0 255.255.255.0",
+    "description": "Defini subrezo ak mask pou pis DHCP la.",
+    "type": "Configuration",
+    "category": "DHCP Server & Relay",
+    "mode": "DHCP Config"
+  },
+  {
+    "command": "default-router 192.168.10.1",
+    "description": "Bay adrès paserèl (gateway) ki pou bay kliyan yo.",
+    "type": "Configuration",
+    "category": "DHCP Server & Relay",
+    "mode": "DHCP Config"
+  },
+  {
+    "command": "dns-server 8.8.8.8",
+    "description": "Bay adrès sèvè DNS pou kliyan DHCP yo.",
+    "type": "Configuration",
+    "category": "DHCP Server & Relay",
+    "mode": "DHCP Config"
+  },
+  {
+    "command": "ip dhcp excluded-address 192.168.10.1 192.168.10.10",
+    "description": "Ekskli adrès IP yo pou sèvè DHCP pa bay yo otomatikman.",
+    "type": "Configuration",
+    "category": "DHCP Server & Relay",
+    "mode": "Global Config"
+  },
+  {
+    "command": "ip helper-address 192.168.20.2",
+    "description": "Voye demann DHCP (DHCP Broadcast) bay yon sèvè ki nan yon lòt rezo.",
+    "type": "Configuration",
+    "category": "DHCP Server & Relay",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "ip nat inside source static 192.168.1.10 203.0.113.5",
+    "description": "Konfigire Static NAT pou tradui yon IP prive an yon IP piblik fiks.",
+    "type": "Configuration",
+    "category": "NAT & PAT",
+    "mode": "Global Config"
+  },
+  {
+    "command": "ip nat inside source list 1 interface GigabitEthernet0/1 overload",
+    "description": "Konfigire PAT (Port Address Translation) pou pataje yon IP piblik ak plizyè IP prive.",
+    "type": "Configuration",
+    "category": "NAT & PAT",
+    "mode": "Global Config"
+  },
+  {
+    "command": "ip nat inside",
+    "description": "Mete yon entèfas bò rezo entèn la (Inside).",
+    "type": "Configuration",
+    "category": "NAT & PAT",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "ip nat outside",
+    "description": "Mete yon entèfas bò rezo ekstern nan oswa Entènèt la (Outside).",
+    "type": "Configuration",
+    "category": "NAT & PAT",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "show ip nat translations",
+    "description": "Montre tout tradiksyon IP ki aktif kounye a.",
+    "type": "Show / Verification",
+    "category": "NAT & PAT",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "access-list 10 permit 192.168.1.0 0.0.0.255",
+    "description": "Kreye yon Standard ACL ki otorize yon rezo.",
+    "type": "Configuration",
+    "category": "Standard & Extended ACLs",
+    "mode": "Global Config"
+  },
+  {
+    "command": "ip access-list extended SECURE_ACL",
+    "description": "Kreye yon Extended Named ACL pou plis kontwòl.",
+    "type": "Configuration",
+    "category": "Standard & Extended ACLs",
+    "mode": "Global Config"
+  },
+  {
+    "command": "deny tcp any 192.168.2.0 0.0.0.255 eq 80",
+    "description": "Anpeche nenpòt moun pase an HTTP sou sèvè yo.",
+    "type": "Configuration",
+    "category": "Standard & Extended ACLs",
+    "mode": "ACL Config"
+  },
+  {
+    "command": "permit ip any any",
+    "description": "Otorize rès trafik la ki pa t bloke nan ACL la.",
+    "type": "Configuration",
+    "category": "Standard & Extended ACLs",
+    "mode": "ACL Config"
+  },
+  {
+    "command": "ip access-group SECURE_ACL in",
+    "description": "Aplike yon ACL sou yon entèfas pou trafik k ap antre.",
+    "type": "Configuration",
+    "category": "Standard & Extended ACLs",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "show access-lists",
+    "description": "Afiche tout ACL ki kreye yo ak kantite fwa yo frape (matches).",
+    "type": "Show / Verification",
+    "category": "Standard & Extended ACLs",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "crypto ikev2 proposal MY_PROP",
+    "description": "Konfigire IKEv2 proposal pou IPsec VPN.",
+    "type": "Configuration",
+    "category": "IPsec VPN & IKEv1/IKEv2",
+    "mode": "Global Config"
+  },
+  {
+    "command": "crypto ipsec profile MY_PROFILE",
+    "description": "Kreye yon pwofil IPsec pou sekirize tinèl yo.",
+    "type": "Configuration",
+    "category": "IPsec VPN & IKEv1/IKEv2",
+    "mode": "Global Config"
+  },
+  {
+    "command": "interface Tunnel0",
+    "description": "Kreye yon koòdone tèlman vityèl pou VPN oswa GRE.",
+    "type": "Configuration",
+    "category": "GRE Tunnels",
+    "mode": "Global Config"
+  },
+  {
+    "command": "tunnel source GigabitEthernet0/0",
+    "description": "Mete sous fizik pou yon tinèl GRE.",
+    "type": "Configuration",
+    "category": "GRE Tunnels",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "tunnel destination 203.0.113.10",
+    "description": "Mete destinasyon adrès IP piblik pou tinèl la.",
+    "type": "Configuration",
+    "category": "GRE Tunnels",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "crypto map MY_MAP 10 ipsec-isakmp",
+    "description": "Kreye yon Crypto Map pou IPsec site-to-site VPN.",
+    "type": "Configuration",
+    "category": "IPsec VPN & IKEv1/IKEv2",
+    "mode": "Global Config"
+  },
+  {
+    "command": "crypto isakmp policy 10",
+    "description": "Konfigire règleman ISAKMP Phase 1 pou IPsec.",
+    "type": "Configuration",
+    "category": "IPsec VPN & IKEv1/IKEv2",
+    "mode": "Global Config"
+  },
+  {
+    "command": "show crypto ipsec sa",
+    "description": "Verifye eta ak estati Security Associations pou VPN IPsec.",
+    "type": "Show / Verification",
+    "category": "IPsec VPN & IKEv1/IKEv2",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "crypto ipsec transform-set MY_TRANSFORM esp-aes esp-sha-hmac",
+    "description": "Defini metòd ankripsyon ak otantifikasyon pou trafik IPsec la.",
+    "type": "Configuration",
+    "category": "IPsec VPN & IKEv1/IKEv2",
+    "mode": "Global Config"
+  },
+  {
+    "command": "standby 1 ip 192.168.1.254",
+    "description": "Konfigire HSRP pou bay yon gateway vityèl ak redundans.",
+    "type": "Configuration",
+    "category": "FHRP (HSRP, VRRP, GLBP)",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "standby 1 priority 110",
+    "description": "Chanje priyorite aparèy la pou l ka vin Active Router nan HSRP.",
+    "type": "Configuration",
+    "category": "FHRP (HSRP, VRRP, GLBP)",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "standby 1 preempt",
+    "description": "Otorize routeur la reprann wòl Active san tann lè l retounen an liy.",
+    "type": "Configuration",
+    "category": "FHRP (HSRP, VRRP, GLBP)",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "show standby brief",
+    "description": "Montre yon rezime eta HSRP yo (Active, Standby, Virtual IP).",
+    "type": "Show / Verification",
+    "category": "FHRP (HSRP, VRRP, GLBP)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "vrrp 10 ip 10.0.0.1",
+    "description": "Konfigire protokòl VRRP kòm yon estanda louvri pou redundans.",
+    "type": "Configuration",
+    "category": "FHRP (HSRP, VRRP, GLBP)",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "glbp 1 ip 10.0.0.254",
+    "description": "Konfigire GLBP pou fè ni redundans ni pataj chaj (Load Balancing).",
+    "type": "Configuration",
+    "category": "FHRP (HSRP, VRRP, GLBP)",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "ntp server 203.0.113.100",
+    "description": "Synkronize lè ak dat sistèm nan ak yon sèvè NTP.",
+    "type": "Configuration",
+    "category": "NTP (Network Time Protocol)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "show ntp status",
+    "description": "Verifye si aparèy la byen senkronize ak sèvè tan an.",
+    "type": "Show / Verification",
+    "category": "NTP (Network Time Protocol)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "snmp-server community PUBLIC ro",
+    "description": "Konfigire yon kominote SNMP an mòd Read-Only pou siveyans.",
+    "type": "Configuration",
+    "category": "SNMP & Syslog",
+    "mode": "Global Config"
+  },
+  {
+    "command": "logging host 192.168.1.50",
+    "description": "Voye tout evènman journalizasyon (logs) yo bay yon sèvè Syslog.",
+    "type": "Configuration",
+    "category": "SNMP & Syslog",
+    "mode": "Global Config"
+  },
+  {
+    "command": "show logging",
+    "description": "Afiche tout dènye mesaj ak alèt ki te jenere nan memwa buffer a.",
+    "type": "Show / Verification",
+    "category": "SNMP & Syslog",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "aaa new-model",
+    "description": "Aktivite sèvis otantifikasyon, otorizasyon ak kontabilite (AAA).",
+    "type": "Configuration",
+    "category": "AAA & RADIUS/TACACS+",
+    "mode": "Global Config"
+  },
+  {
+    "command": "tacacs server TAC_SERVER",
+    "description": "Konfigire yon sèvè TACACS+ pou jere aksè santralize.",
+    "type": "Configuration",
+    "category": "AAA & RADIUS/TACACS+",
+    "mode": "Global Config"
+  },
+  {
+    "command": "username admin privilege 15 secret SuperSecretPass",
+    "description": "Kreye yon itilizatè lokal ak aksè konplè epi yon modpas ankrede.",
+    "type": "Configuration",
+    "category": "SSH & Telnet Management",
+    "mode": "Global Config"
+  },
+  {
+    "command": "ip domain-name mynetwork.local",
+    "description": "Konfigire yon non domèn nesesè pou jenere kle SSH.",
+    "type": "Configuration",
+    "category": "SSH & Telnet Management",
+    "mode": "Global Config"
+  },
+  {
+    "command": "crypto key generate rsa general-keys modulus 2048",
+    "description": "Jenere kle RSA 2048 bits pou fonksyònman SSH.",
+    "type": "Configuration",
+    "category": "SSH & Telnet Management",
+    "mode": "Global Config"
+  },
+  {
+    "command": "line vty 0 4",
+    "description": "Antre nan konfigirasyon liy aksè adistans yo.",
+    "type": "Configuration",
+    "category": "SSH & Telnet Management",
+    "mode": "Global Config"
+  },
+  {
+    "command": "transport input ssh",
+    "description": "Otorize sèlman SSH pou koneksyon adistans anpeche Telnet ki pa sekirize.",
+    "type": "Configuration",
+    "category": "SSH & Telnet Management",
+    "mode": "Line Config"
+  },
+  {
+    "command": "login local",
+    "description": "Mande pou itilizatè a sèvi ak baz done lokal la pou l antre.",
+    "type": "Configuration",
+    "category": "SSH & Telnet Management",
+    "mode": "Line Config"
+  },
+  {
+    "command": "class-map match-any VOICE_CLASS",
+    "description": "Defini yon klas pou idantifye trafik vwa pou QoS.",
+    "type": "Configuration",
+    "category": "QoS (Quality of Service)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "policy-map QOS_POLICY",
+    "description": "Kreye yon regleman QoS pou aplike sou yon klas trafik.",
+    "type": "Configuration",
+    "category": "QoS (Quality of Service)",
+    "mode": "Global Config"
+  },
+  {
+    "command": "priority 512",
+    "description": "Bay trafik sa a pi gwo priyorite nan keu la (Strict Priority Queue).",
+    "type": "Configuration",
+    "category": "QoS (Quality of Service)",
+    "mode": "Policy-Map Config"
+  },
+  {
+    "command": "service-policy output QOS_POLICY",
+    "description": "Aplike regleman QoS la sou yon entèfas an sòti.",
+    "type": "Configuration",
+    "category": "QoS (Quality of Service)",
+    "mode": "Interface Config"
+  },
+  {
+    "command": "show policy-interface GigabitEthernet0/0",
+    "description": "Verifye an tan reyèl si règleman QoS la ap trete e sote fonksyone.",
+    "type": "Show / Verification",
+    "category": "QoS (Quality of Service)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "boot system flash:cisco_ios.bin",
+    "description": "Mete yon imaj IOS espesifik pou rdemare aparèy la.",
+    "type": "Configuration",
+    "category": "IOS Upgrades & ROMMON",
+    "mode": "Global Config"
+  },
+  {
+    "command": "dir flash:",
+    "description": "Lisie tout fichye ki nan memwa flash aparèy la.",
+    "type": "Show / Verification",
+    "category": "System & File Management",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "monitor capture MY_CAP interface Gi0/0 both",
+    "description": "Inisyalize yon kapture pake (EPC) sou yon entèfas nan tou de sans yo.",
+    "type": "Troubleshooting",
+    "category": "Troubleshooting & Packet Capture (EPC)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "monitor capture MY_CAP start",
+    "description": "Kòmanse anrejistreman pake yo sou entèfas la.",
+    "type": "Troubleshooting",
+    "category": "Troubleshooting & Packet Capture (EPC)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "show monitor capture MY_CAP buffer dump",
+    "description": "Afiche pake ki kaptire yo an fòma ASCII/Hex.",
+    "type": "Show / Verification",
+    "category": "Troubleshooting & Packet Capture (EPC)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "debug ip ospf events",
+    "description": "Aktivite depanaj nan tan reyèl pou tout evènman OSPF yo.",
+    "type": "Troubleshooting",
+    "category": "Troubleshooting & Packet Capture (EPC)",
+    "mode": "Privileged EXEC"
+  },
+  {
+    "command": "undebug all",
+    "description": "Dezakti tout pwosesis debug ki t ap kouri yo pou evite chaje CPU a.",
+    "type": "Troubleshooting",
+    "category": "Troubleshooting & Packet Capture (EPC)",
+    "mode": "Privileged EXEC"
+  }
+]
